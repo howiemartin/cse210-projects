@@ -1,3 +1,10 @@
+//Name: Howard Martin
+//CSE 210 - 01
+//Scripture Memorizer
+//Show of Creativity: I changed my hideRandomWord() method so it always hides a word that hasn't already been hidden. 
+// to ensure it does not infinitely loop at the end, I put a limit of 50 tries before it gives up trying to hide another word.
+
+
 using System;
 
 class Program

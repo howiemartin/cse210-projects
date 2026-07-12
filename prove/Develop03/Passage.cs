@@ -24,14 +24,22 @@ public class Passage
     public void hideRandomWord()
     {
         Random hmrandom = new Random();
+    
+    int hmwordsHidden = 0;
+    int hmattempts = 0;
 
-        for (int i = 0; i < 3; i++)
+    while (hmwordsHidden < 3 && hmattempts < 50)
+    {
+        int hmrandi = hmrandom.Next(_hmwordlist.Count);
+        Word hmrandomword = _hmwordlist[hmrandi];
+
+        if (hmrandomword.isHidden() == false) 
         {
-            
-            int hmrandi = hmrandom.Next(_hmwordlist.Count);
-
-            Word hmrandomword = _hmwordlist[hmrandi];
             hmrandomword.hideWord();
+            hmwordsHidden++;
         }
+        
+        hmattempts++;
+    }
     }
 }

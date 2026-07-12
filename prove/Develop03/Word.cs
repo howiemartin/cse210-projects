@@ -14,6 +14,10 @@ public class Word
         _hmisHidden = true;
     }
     
+    public bool isHidden()
+    {
+        return _hmisHidden;
+    }
     public string displayWord()
     {
         if (_hmisHidden == true)
